@@ -1,0 +1,32 @@
+<!-- 6.Создать меню из пунктов-гиперссылок:
+    Определить класс MenuItem.
+	Определить свойства: title (название пункта меню или текст гиперссылки),
+	url (значение атрибута href для гиперссылки), метод show (вывод на экран созданного меню).
+	Добавить 4 пункта меню в виде списка (тег li)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 6</title>
+</head>
+<body>
+<script>
+  function MenuItem(title, url) {
+    this.title = title;
+    this.url = url;
+    this.show = function () {
+      document.write("<li><a href=" + this.url + ">" + this.title + "</li>");
+    }
+  }
+
+  var n = prompt("Сколько пунктов  в меню?", "");
+  var menu = [];
+  for (var i = 0; i < n; i++) {
+
+    menu[i] = new MenuItem(prompt("Вевдите название пункта" + (i + 1), ""), prompt("Введите его адресс", ""));
+    menu[i].show();
+  }
+</script>
+</body>
+</html>

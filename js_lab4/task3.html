@@ -1,0 +1,22 @@
+<!--Пользователь вводит свои имя и фамилию (два слова, разделённые пробелом).
+Проверить правильность ввода, вывести сначала фамилию, затем имя.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3</title>
+</head>
+<body>
+<script>
+  var user = prompt("Enter name and surname", "");
+  var pattern = /[A-Z]+[a-z]*\s[A-Z]+[a-z]*/;
+  if (user.search(pattern) !== -1) {
+    document.write("Data are right" + "<br>");
+    var d = user.split(" ");
+    document.write(d[1] + " " + d[0]);
+  } else {
+    document.write("Data are wrong");
+  }
+</script>
+</body>
+</html>

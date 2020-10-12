@@ -1,0 +1,18 @@
+<!--С помощью регулярных выражений удалите в тексте суффиксы -ик-:
+домик -> дом, столик -> стол, ключик -> ключ
+При этом «ик» не должен удалиться в таких словах как «икра», «абрикос» и т.п.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 8</title>
+</head>
+<body>
+<script>
+  var text = prompt("Enter: ", "");
+  var pattern = /ик$/;
+  document.write(text.replace(pattern, ""));
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!-- 4.К встроенному классу String добавить метод printMe(), который выводит слово «Ура!»
+как заголовок (тег h…), указанного пользователем уровня (prompt).
+Уровень заголовка (1, 2 … 6) можно добавить в виде свойства класса String.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 4</title>
+</head>
+<body>
+<script>
+  String.prototype.hLevel = "1";
+  String.prototype.printMe = printHeadline();
+
+  function printHeadline() {
+    document.write('<h' + this.hLevel + '> Ура! </h' + this.hLevel + '>');
+  }
+
+  var s = new String();
+  s.hLevel = prompt("Enter the head level", "");
+  s.printMe();
+</script>
+</body>
+</html>

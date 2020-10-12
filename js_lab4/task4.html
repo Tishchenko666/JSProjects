@@ -1,0 +1,21 @@
+<!--Проверьте, что строка, введенная пользователем, является десятичной дробью или целым числом.
+Выведите сначала целую, затем дробную части.
+Учтите, что разделителем может быть как запятая, так и точка.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 4</title>
+</head>
+<body>
+<script>
+  var number = prompt("Enter the number: ", "");
+  var str = number.split(/[.,]/);
+  if (str.length === 1) {
+    document.write("Целое");
+  } else {
+    document.write("Дробное: " + str[0] + " и " + str[1]);
+  }
+</script>
+</body>
+</html>

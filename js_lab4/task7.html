@@ -1,0 +1,16 @@
+<!--Найдите в тексте слова, состоящие из 15 и более символов.
+Замените такие слова в тексте на слова вида «абстр…ние».-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 7</title>
+</head>
+<body>
+<script>
+  var text = prompt("Enter the text: ", "");
+  var pattern = /[\S]{15,}/g;
+  document.write(text.replace(pattern, "абстр…ние"));
+</script>
+</body>
+</html>

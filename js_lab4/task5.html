@@ -1,0 +1,18 @@
+<!--Пользователь вводит путь к файлу на компьютере.
+Последовательно вывести имена папок, которые нужно открыть, чтобы получить доступ к файлу.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 5</title>
+</head>
+<body>
+<script>
+  var path = prompt("Enter the path: ", "");
+  var str = path.split(/\//);
+  for (var i = 0; i < str.length; i++) {
+    document.write(str[i] + "<br>");
+  }
+</script>
+</body>
+</html>

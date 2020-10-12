@@ -1,0 +1,24 @@
+<!--Пользователь вводит свои имя и фамилию (два слова, разделённые пробелом).
+1.	Найти в заготовленном списке введенные данные
+2.	Заменить найденные данные на Иванов Иван
+Список:
+Кузьмин Иван
+Петров Петр
+Федоров Иван
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 1</title>
+</head>
+<body>
+<script>
+  var user = prompt("Enter surname and name", "");
+  var u_list = "Кузьмин Иван Петров Петр Федоров Иван";
+  document.write("Users: " + u_list + "<br>");
+  document.write("You enter: " + user + "<br>");
+  document.write("Users after changing: " + u_list.replace(user, "Иванов Иван"));
+</script>
+</body>
+</html>
